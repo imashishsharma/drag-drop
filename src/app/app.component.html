@@ -1,0 +1,28 @@
+<!--
+  This component is for drag and drop
+ -->
+<div class="container container-fluid">
+  <div cdkDropList (cdkDropListDropped)="drop($event)" class="row" cdkDropListOrientation="horizontal">
+    <div
+      class="card image-container col-3"
+      *ngFor="let image of images; let imageIndex = index"
+      [ngClass]="{'selected-image': image.selected}"
+      cdkDrag
+    >
+      <img [src]="image.url" alt="Image" class="image-width img-fluid" (click)="selectImage(image, imageIndex)"/>
+    </div>
+    <div class="card image-container col-3">
+      <label for="fileUpload" class="fileUploadSelect">
+        <span class="plus-icon">+</span>
+        <p>Select Photo</p>
+      </label>
+      <input
+        type="file"
+        multiple="multiple"
+        id="fileUpload"
+        class="file-select-input"
+        (change)="fileChange($event)"
+      />
+    </div>
+  </div>
+</div>

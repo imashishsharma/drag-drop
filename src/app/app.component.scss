@@ -1,0 +1,40 @@
+.file-select-input[_ngcontent-c17] {
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.container {
+  margin-top: 25px;
+}
+
+.plus-icon {
+  font-size: 25px;
+}
+
+.file-select-input {
+  z-index: -1;
+  display: none;
+}
+
+.fileUploadSelect {
+  height: 13em;
+}
+
+.image-container {
+  width: 12em;
+  height: 13em;
+  background-color: #fafafa;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0;
+}
+
+.image-width {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.selected-image {
+  border: 2px solid red;
+}
